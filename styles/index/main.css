@@ -1,0 +1,244 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  font-family: "Open Sans";
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .menu {
+  margin-left: 10vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header .menu li {
+  margin: 0 15px;
+  padding: 0 10px;
+}
+.header .menu li a {
+  font-size: 2rem;
+  color: #595757;
+  text-decoration: none;
+  font-weight: 50;
+  transition: 0.2s ease all;
+}
+.header .menu li a:hover {
+  color: black;
+}
+.header .menu li a i {
+  margin-right: 3px;
+}
+.header .menu li a img {
+  max-width: 130px;
+}
+.header .menu-contact {
+  margin-right: 10vw;
+  display: flex;
+  flex-direction: row;
+}
+.header .menu-contact li {
+  margin: 0 8px;
+  padding: 0 4px;
+}
+.header .menu-contact li a {
+  font-size: 2rem;
+  color: black;
+  text-decoration: none;
+  font-weight: 50;
+  transition: 0.2s ease all;
+}
+.header .menu-contact li a:hover {
+  color: black;
+}
+.header .menu-contact li a i {
+  margin-right: 3px;
+  color: #595757;
+  transition: 0.2s ease all;
+}
+.header .menu-contact li a i:hover {
+  color: black;
+}
+
+/*# sourceMappingURL=main.css.map */
