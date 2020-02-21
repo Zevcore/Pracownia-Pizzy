@@ -2,6 +2,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
 html,
 body,
 div,
@@ -239,6 +241,177 @@ html {
 }
 .header .menu-contact li a i:hover {
   color: black;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+}
+main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/images/pizza.jpg");
+  background-position: left;
+  z-index: -1;
+}
+main h1 {
+  margin-left: 50px;
+  color: white;
+  font-family: "Anton";
+  font-size: 4.5rem;
+  font-style: italic;
+}
+main h2 {
+  margin-left: 50px;
+  font-size: 3rem;
+  color: white;
+  font-family: "Open-Sans", sans-serif;
+}
+main .btn {
+  font-family: "Open-Sans", sans-serif;
+  margin-left: 50px;
+  background-color: #1d51e0;
+  padding: 20px 0;
+  width: 250px;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  transition: 0.2s ease all;
+}
+main .btn:hover {
+  background-color: #2e5fe6;
+  transform: scale(1.1, 1.1);
+}
+
+.fast-menu {
+  display: flex;
+  justify-content: center;
+  margin: 5vw 0;
+  width: 100%;
+}
+.fast-menu a {
+  font-family: "Open-Sans", sans-serif;
+  width: 30vw;
+  height: 300px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+  font-size: 4rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 1px 1px black;
+}
+.fast-menu a:first-child {
+  position: relative;
+}
+.fast-menu a:first-child::before {
+  position: absolute;
+  content: "";
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/images/special.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: grayscale(70%);
+}
+.fast-menu a:nth-child(2) {
+  position: relative;
+}
+.fast-menu a:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/images/order.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: grayscale(70%);
+}
+.fast-menu a:last-child {
+  position: relative;
+}
+.fast-menu a:last-child::before {
+  position: absolute;
+  content: "";
+  top: 20px;
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/images/contact.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: grayscale(70%);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 5vw;
+  background-color: #141414;
+}
+.menu h1.heading {
+  text-align: center;
+  font-family: "Anton";
+  font-style: italic;
+  font-size: 4rem;
+  color: white;
+  letter-spacing: 3px;
+  padding-top: 30px;
+}
+.menu article {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu article img {
+  max-width: 400px;
+  max-height: 300px;
+  border-radius: 25px;
+  transition: 0.2s ease all;
+}
+.menu article img:hover {
+  filter: grayscale(50%);
+}
+.menu article .wrapper {
+  font-family: "Open-Sans", sans-serif;
+  padding-left: 130px;
+}
+.menu article .wrapper h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: white;
+}
+.menu article .wrapper h2 {
+  font-size: 2.5rem;
+  color: #1d51e0;
+  padding: 5px 0;
+}
+.menu article .wrapper h3 {
+  font-size: 2rem;
+  color: white;
+}
+.menu article .wrapper h3 span {
+  color: gray;
 }
 
 /*# sourceMappingURL=main.css.map */
