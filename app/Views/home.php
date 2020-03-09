@@ -1,3 +1,4 @@
+<?php include_once("app/Views/header.php"); ?>
 <main class="main">
     <h1>PIZZA SOBIEKURSK</h1>
     <h2>TYLKO NA DOWÓZ!</h2>
@@ -99,3 +100,5 @@
     </article>
 
 </section>
+
+<?php include_once("app/Views/footer.php");

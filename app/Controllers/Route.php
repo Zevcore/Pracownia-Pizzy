@@ -4,7 +4,9 @@ namespace app\Controllers;
 
 class Route{
     public static $validRoutes = ['login', 'order', 'home', 'admin'];
+    public static $adminValidRoutes = ['dashboard'];
     public static $url;
+    public static $act;
 
     public static function loadView(){
         if(isset($_GET['url'])){
@@ -14,12 +16,24 @@ class Route{
             if(in_array($url, self::$validRoutes)){
                 include_once "app/Views/$url.php";
             }else{
-                // albo 404
-                header("Location: ".self::homePage());
-                return;
+                include_once "app/Views/404.php";
             }
         }else{
             include_once "app/Views/home.php";
+        }
+    }
+
+    public static function loadAdminView(){
+        if(isset($_GET['act'])){
+            $act = self::cleanUrl($_GET['act']);
+            self::$act = $act;
+
+            if(in_array($act, self::$adminValidRoutes)){
+                include_once "app/Views/admin/$act.php";
+                return;
+            }
+        }else{
+            include_once "app/Views/admin/dashboard.php";
         }
     }
 

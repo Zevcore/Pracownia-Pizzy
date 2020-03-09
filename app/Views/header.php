@@ -19,7 +19,7 @@
 
     <header class="header">
         <ul class="menu">
-            <li><a href="index"><img src="assets/images/logo.jpg"></a></li>
+            <li><a href="home"><img src="assets/images/logo.jpg"></a></li>
             <li class="burger"><a onclick="slideMenu()"><i class="fas fa-bars"></i></a></li>
             <li class="submenu"><a href="/"><i class="fas fa-pizza-slice"></i> Menu</a></li>
             <li class="submenu"><a href="order"><i class="fas fa-utensils"></i> Zamów</a></li>

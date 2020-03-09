@@ -7,6 +7,8 @@
     }
 
     AuthController::checkLoggedIn();
+
+    include_once('app/Views/header.php');
 ?>
     <!-- admin admin -->
     <form method='POST' class="loginForm">
@@ -20,3 +22,5 @@
         <input type="submit" name='login_submit' value="Zaloguj">
 
     </form>
+
+<?php include_once("app/Views/footer.php");
