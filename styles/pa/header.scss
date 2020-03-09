@@ -1,0 +1,30 @@
+.header {
+    font-family: 'Open-Sans', sans-serif;
+    width: 100%;
+    background-color: #3d3d3d;   
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+
+    ul {
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        li {
+            margin: 5px;
+            padding: 10 25px;
+            transition: .2s ease all;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+            &:hover {
+                background-color: white;
+                border-radius: 25px;
+                a {
+                    color: #3d3d3d;
+                }
+            }
+        }
+    }
+}

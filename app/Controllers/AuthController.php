@@ -28,4 +28,13 @@ class AuthController extends Auth{
             }
         }
     }
+
+    public function logout(){
+        if(isset($_GET['act']) && $_GET['act'] == "logout" && isset($_SESSION['logged_in'])){
+            session_unset();
+            session_destroy();
+            header("Location: ".Route::homePage());
+            die();
+        }
+    }
 }

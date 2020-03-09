@@ -30,7 +30,6 @@ class Route{
 
             if(in_array($act, self::$adminValidRoutes)){
                 include_once "app/Views/admin/$act.php";
-                return;
             }
         }else{
             include_once "app/Views/admin/dashboard.php";
