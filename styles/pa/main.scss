@@ -10,6 +10,49 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 @import 'header';
 
+.menuConf {
+    font-family: 'Open-Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    tr {
+        td {
+            text-align: center;
+            padding: 15px;
+            border: 1px solid black;
+            a {
+                text-decoration: none;
+                color: darkgoldenrod;
+            }
+        }
+        &:first-child {
+            td {
+                color: darkgoldenrod;
+            }
+        }
+    }
+}
+
+.newMenu {
+    font-family: 'Open-Sans', sans-serif;
+    margin-top: 20px;
+    input {
+        font-size: 15px;
+        background-color: darkgreen;
+        width: 300px;
+        margin-left: calc(50% - 150px);
+        padding: 15px 0;
+        text-align: center;
+        color: white;
+        border-radius: 25px;
+        transition: .2s ease all;
+        &:hover {
+            cursor: pointer;
+            background-color: green;
+        }
+    }
+}
+
 .order {
     font-family: 'Open-Sans', sans-serif;
     width: 90vw;

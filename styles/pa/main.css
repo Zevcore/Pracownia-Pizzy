@@ -205,6 +205,45 @@ textarea {
   color: #3d3d3d;
 }
 
+.menuConf {
+  font-family: "Open-Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.menuConf tr td {
+  text-align: center;
+  padding: 15px;
+  border: 1px solid black;
+}
+.menuConf tr td a {
+  text-decoration: none;
+  color: darkgoldenrod;
+}
+.menuConf tr:first-child td {
+  color: darkgoldenrod;
+}
+
+.newMenu {
+  font-family: "Open-Sans", sans-serif;
+  margin-top: 20px;
+}
+.newMenu input {
+  font-size: 15px;
+  background-color: darkgreen;
+  width: 300px;
+  margin-left: calc(50% - 150px);
+  padding: 15px 0;
+  text-align: center;
+  color: white;
+  border-radius: 25px;
+  transition: 0.2s ease all;
+}
+.newMenu input:hover {
+  cursor: pointer;
+  background-color: green;
+}
+
 .order {
   font-family: "Open-Sans", sans-serif;
   width: 90vw;

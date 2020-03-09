@@ -502,8 +502,67 @@ main .btn:hover {
   left: calc(50% - 2rem);
   border-radius: 25px;
 }
+.orderForm .clientData {
+  margin-top: 30px;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  margin-left: calc(50% - 200px);
+}
+.orderForm .clientData label {
+  display: none;
+}
+.orderForm .clientData input {
+  border-bottom: 2px solid #3d3d3d;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+.orderForm .clientData select {
+  border: 2px solid #3d3d3d;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+.orderForm .clientData .continue {
+  background-color: #3d3d3d;
+  max-width: 100px;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+  transition: 0.2s ease all;
+}
+.orderForm .clientData .continue:hover {
+  background-color: #303030;
+  color: #f2f2f2;
+  transform: scale(1.1, 1.1);
+  cursor: pointer;
+}
+.orderForm .clientData .errorMsg {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
 .orderForm .orderField {
   display: flex;
+}
+.orderForm .orderField .goBack {
+  background-color: #3d3d3d;
+  width: 100px;
+  height: 35px;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+  transition: 0.2s ease all;
+}
+.orderForm .orderField .goBack:hover {
+  background-color: #303030;
+  color: #f2f2f2;
+  transform: scale(1.1, 1.1);
+  cursor: pointer;
 }
 .orderForm .orderField .orderMenu, .orderForm .orderField .orderCart {
   width: 45vw;

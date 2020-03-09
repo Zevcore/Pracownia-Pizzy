@@ -1,7 +1,7 @@
 # Pracownia Pizzy
 
 # To-do
-- Adres i sposób płatności w orders
+- 
 
 # Tabele
 ## menu
@@ -9,11 +9,13 @@
 - name
 - ingredients
 - price
+- image
 
 ## orders
 - id
 - menu_ids
 - address
+- email
 - payment
 - price
 - date

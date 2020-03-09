@@ -2,14 +2,31 @@ $(".continue").click(function(){
     $(".errorMsg").empty();
 
     if(!$("#adr1").val() || !$("#adr2").val() || !$("#adr3").val()){
-        $(".errorMsg").html("Wpisz pełny adres");
+        $(".errorMsg").html("Wpisz pełny adres.");
         return;
     }
 
+    if(!$("#email").val()){
+        $(".errorMsg").html("Wpisz adres email.");
+        return;
+    }
+
+    if(!isEmail($("#email").val())){
+        $(".errorMsg").html("Podany email nie jest prawidłowy.");
+        return;
+    }
+
+    function isEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+      }
+
     var address = $("#adr1").val()+", "+$("#adr2").val()+" "+$("#adr3").val();
+    var email = $("#email").val();
     var payment = $("#payment").val();
 
     $("input[name=address]").val(address);
+    $("input[name=email]").val(email);
     $("input[name=payment]").val(payment);
 
     $(".clientData").hide();
@@ -57,7 +74,12 @@ $('.add').click(function(event) {
 });
 
 var form_submit = false;
-$(".orderCart").submit(function(){
+$(".orderCart").submit(function(event){
+    if(!$(".orderId").length){
+        event.preventDefault();
+        $(".errorMsg2").html("Nie wybrałeś żadnej pizzy!");
+        return;
+    }
     form_submit = true;
 });
 

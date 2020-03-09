@@ -1,4 +1,12 @@
-<?php include_once('app/Views/header.php'); ?>
+<?php
+    use app\Controllers\OrderController;
+    if(isset($_POST['submit_order'])){
+        $order = new OrderController;
+        $order->setOrderData($_POST);
+    }
+
+    include_once('app/Views/header.php');    
+?>
 
     <section class="orderForm">
 
@@ -9,6 +17,9 @@
             <input type='text' id='adr1' placeholder='Miasto'>
             <input type='text' id='adr2' placeholder='Ulica'>
             <input type='number' id='adr3' placeholder='Nr Mieszkania'>
+            <br>
+            <label>Email: </label>
+            <input type='text' id='email' placeholder='Email'>
             <br>
             <label>Metoda płatności</label>
             <select id='payment'>
@@ -21,7 +32,7 @@
         </section>
 
         <section class="orderField" style='display: none;'>
-            <span class='goBack'>cofnij</span>
+            <span class='goBack'>Cofnij</span>
             <section class="orderMenu">
                 <?php
                     use app\Controllers\MenuController;
@@ -43,6 +54,7 @@
                 </div>
 
                 <input type='hidden' name='address'>
+                <input type='hidden' name='email'>
                 <input type='hidden' name='payment'>
 
                 <div class="sum">
@@ -50,6 +62,8 @@
                     <input type='hidden' name='full_price' value='0'>
                 </div>
                 <input type='submit' name='submit_order' value='Zamów'>
+                <br>
+                <span class='errorMsg2' style='color: red;'></span>
             </form>
             
         </section>
