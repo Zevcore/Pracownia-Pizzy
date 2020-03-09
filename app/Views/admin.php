@@ -16,8 +16,9 @@
 <body>
 
     <header class="header">
-        <ul>
-            <li><a href="admin/orders">Zamówienia</a></li>
+        <ul class='adminMenu'>
+            <li><a href="<?= Route::homePage(); ?>">Strona Główna</a></li>
+            <li><a href="admin/dashboard">Zamówienia</a></li>
             <li><a href="admin/menu">Moje Menu</a></li>
             <li><a href="admin/users">Użytkownicy</a></li>
             <li><a href="admin/logout">Wyloguj się</a></li>

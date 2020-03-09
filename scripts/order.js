@@ -1,3 +1,26 @@
+$(".continue").click(function(){
+    $(".errorMsg").empty();
+
+    if(!$("#adr1").val() || !$("#adr2").val() || !$("#adr3").val()){
+        $(".errorMsg").html("Wpisz pełny adres");
+        return;
+    }
+
+    var address = $("#adr1").val()+", "+$("#adr2").val()+" "+$("#adr3").val();
+    var payment = $("#payment").val();
+
+    $("input[name=address]").val(address);
+    $("input[name=payment]").val(payment);
+
+    $(".clientData").hide();
+    $(".orderField").show();
+});
+
+$(".goBack").click(function(){
+    $(".clientData").show();
+    $(".orderField").hide();
+});
+
 var i = 0;
 $('.add').click(function(event) {
     event.preventDefault();

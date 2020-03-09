@@ -6,13 +6,13 @@
     border-bottom-right-radius: 50px;
 
 
-    ul {
+    ul.adminMenu {
         display: flex;
         padding: 20px;
         justify-content: center;
         li {
             margin: 5px;
-            padding: 10 25px;
+            padding: 10px 25px;
             transition: .2s ease all;
             a {
                 text-decoration: none;
