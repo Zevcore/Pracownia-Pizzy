@@ -21,6 +21,9 @@ html {
         display: flex;
         flex-direction: row;
         align-items: center;
+        li.burger {
+            display: none;
+        }
         li {
             margin: 0 15px;
             padding: 0 10px;

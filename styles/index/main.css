@@ -195,6 +195,9 @@ html {
   flex-direction: row;
   align-items: center;
 }
+.header .menu li.burger {
+  display: none;
+}
 .header .menu li {
   margin: 0 15px;
   padding: 0 10px;
@@ -296,8 +299,8 @@ main .btn:hover {
 .fast-menu {
   display: flex;
   justify-content: center;
-  margin: 5vw 0;
   width: 100%;
+  padding: 35px 0 80px 0;
 }
 .fast-menu a {
   font-family: "Open-Sans", sans-serif;
@@ -322,6 +325,7 @@ main .btn:hover {
   top: 20px;
   left: 0;
   width: 100%;
+  max-width: 100%;
   height: 100%;
   background: url("../../assets/images/special.jpg");
   background-size: cover;
@@ -361,57 +365,271 @@ main .btn:hover {
   filter: grayscale(70%);
 }
 
-.menu {
+.orders {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 20px 5vw;
+  padding: 20px 5vw 50px 5vw;
   background-color: #141414;
 }
-.menu h1.heading {
+.orders h1.heading {
   text-align: center;
-  font-family: "Anton";
+  font-family: "Open-Sans";
   font-style: italic;
   font-size: 4rem;
   color: white;
   letter-spacing: 3px;
   padding-top: 30px;
 }
-.menu article {
+.orders article {
   margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.menu article img {
+.orders article img {
   max-width: 400px;
   max-height: 300px;
   border-radius: 25px;
   transition: 0.2s ease all;
 }
-.menu article img:hover {
+.orders article img:hover {
   filter: grayscale(50%);
 }
-.menu article .wrapper {
+.orders article .wrapper {
   font-family: "Open-Sans", sans-serif;
   padding-left: 130px;
 }
-.menu article .wrapper h1 {
+.orders article .wrapper h1 {
   font-size: 4rem;
   text-transform: uppercase;
   color: white;
 }
-.menu article .wrapper h2 {
+.orders article .wrapper h2 {
   font-size: 2.5rem;
   color: #1d51e0;
   padding: 5px 0;
 }
-.menu article .wrapper h3 {
+.orders article .wrapper h3 {
   font-size: 2rem;
   color: white;
 }
-.menu article .wrapper h3 span {
+.orders article .wrapper h3 span {
   color: gray;
+}
+
+.footer {
+  width: 100%;
+  background-color: black;
+}
+.footer p {
+  font-family: "Open-Sans", sans-serif;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.5rem;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 50px auto;
+  padding: 75px 75px;
+  border-radius: 50px;
+  border: 2px solid black;
+}
+.loginForm label {
+  font-size: 2rem;
+  font-family: "Open-Sans", sans-serif;
+  text-align: center;
+  padding: 15px 0;
+}
+.loginForm input {
+  border-bottom: 2px solid black;
+  margin: 10px 0;
+  font-size: 2rem;
+}
+.loginForm input[type=submit] {
+  border: 2px solid black;
+  padding: 15px;
+  font-size: 2rem;
+}
+
+.orderForm {
+  width: 90vw;
+  margin: 50px 5vw;
+  font-family: "Open-Sans", sans-serif;
+}
+.orderForm h1.title {
+  text-align: center;
+  font-size: 3rem;
+  position: relative;
+  padding: 10px 0;
+}
+.orderForm h1.title:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: black;
+  bottom: 0px;
+  left: calc(50% - 2rem);
+  border-radius: 25px;
+}
+.orderForm .orderField {
+  display: flex;
+}
+.orderForm .orderField .orderMenu, .orderForm .orderField .orderCart {
+  width: 45vw;
+  text-align: center;
+  margin-top: 50px;
+}
+.orderForm .orderField .orderMenu .item {
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease;
+}
+.orderForm .orderField .orderMenu .item:hover {
+  background-color: #f2f2f2;
+}
+.orderForm .orderField .orderMenu .item p {
+  font-size: 1.5rem;
+}
+.orderForm .orderField .orderMenu .item button {
+  margin-left: 20px;
+  font-size: 3rem;
+  color: green;
+  transition: 0.2s ease all;
+}
+.orderForm .orderField .orderMenu .item button:hover {
+  transform: rotate(90deg);
+  color: lime;
+}
+.orderForm .orderField .orderCart .sum {
+  margin-top: 25px;
+}
+.orderForm .orderField .orderCart .sum p {
+  font-size: 2rem;
+}
+.orderForm .orderField .orderCart .sum p span {
+  font-weight: bold;
+}
+.orderForm .orderField .orderCart .sum p b {
+  font-weight: normal;
+  color: green;
+}
+.orderForm .orderField .orderCart input[type=submit] {
+  margin: 20px 0;
+  background-color: green;
+  padding: 10px 25px;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s ease all;
+}
+.orderForm .orderField .orderCart input[type=submit]:hover {
+  cursor: pointer;
+  background-color: lime;
+  transform: scale(1.2, 1.2);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.orderForm .orderField .orderCart .elements .orderId {
+  max-width: 400px;
+  margin-left: calc(50% - 200px);
+  padding: 15px 0;
+  text-align: center;
+  background-color: #f2f2f2;
+  border-bottom: 3px dotted black;
+}
+.orderForm .orderField .orderCart .elements .orderId h1 {
+  font-size: 1.8rem;
+}
+.orderForm .orderField .orderCart .elements .orderId p {
+  font-size: 1.5rem;
+}
+.orderForm .orderField .orderCart .elements .orderId p span {
+  color: green;
+}
+.orderForm .orderField .orderCart .elements .orderId:last-child {
+  margin-bottom: 20px;
+}
+.orderForm .orderField .orderCart .elements .orderId button {
+  margin-left: 20px;
+  font-size: 2rem;
+  color: darkred;
+  transition: 0.2s ease all;
+  position: relative;
+  transform: rotate(90deg);
+  font-weight: bold;
+}
+.orderForm .orderField .orderCart .elements .orderId button:hover {
+  transform: rotate(180deg);
+  color: red;
+}
+
+@media only screen and (max-width: 1000px) {
+  .header {
+    max-width: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header .menu {
+    flex-direction: column;
+    margin-left: 0px;
+    justify-content: center;
+  }
+  .header .menu li.burger {
+    display: block;
+  }
+  .header .menu li {
+    margin: 6px 0;
+    padding: 4px 0;
+  }
+  .header .menu li a i {
+    margin-right: 0;
+  }
+  .header .menu li a img {
+    max-width: 120px;
+  }
+  .header .menu-contact {
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px 0 0 0;
+    text-align: center;
+  }
+  .header .menu-contact li {
+    margin: 6px 0;
+    padding: 4px 0;
+  }
+
+  .fast-menu {
+    max-width: 100%;
+    flex-direction: column;
+  }
+  .fast-menu a {
+    margin: 10px auto;
+    width: 90vw;
+    font-size: 2.5rem;
+  }
+
+  .orders article {
+    flex-direction: column;
+  }
+  .orders article img {
+    max-width: 90%;
+  }
+  .orders article .wrapper {
+    padding: 10px 0;
+  }
+
+  .submenu {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

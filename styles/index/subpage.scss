@@ -1,0 +1,28 @@
+.loginForm {
+
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 50px auto;
+    padding: 75px 75px;
+    border-radius: 50px;
+    border: 2px solid black;
+
+    label {
+        font-size: 2rem;
+        font-family: 'Open-Sans', sans-serif;
+        text-align: center;
+        padding: 15px 0;
+    }
+    input {
+        border-bottom: 2px solid black;
+        margin: 10px 0;
+        font-size:2rem;
+    }
+
+    input[type=submit] {
+        border: 2px solid black;
+        padding: 15px;
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "baza/app",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Piotr Jarema",
+            "email": "kontakt.zevstudio@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4":{
+            "app\\": "app"
+        }
+    },
+    "require": {
+        "php": "^7.2"
+    }
+}
