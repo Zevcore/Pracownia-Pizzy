@@ -262,10 +262,24 @@ textarea {
   font-weight: bold;
   color: darkgoldenrod;
 }
+.order .price {
+  display: block;
+  margin: 5px 0 5px 5px;
+  font-weight: bold;
+}
+.order .date {
+  margin-top: 10px;
+  margin-left: 5px;
+  font-style: italic;
+}
+.order .email {
+  margin-left: 5px;
+  color: darkgoldenrod;
+}
 .order p {
   font-size: 15px;
   margin-left: 5px;
-  padding: 15px 0;
+  padding: 5px 0;
   color: darkgoldenrod;
 }
 .order .payment {
@@ -288,7 +302,7 @@ textarea {
 .order form input:first-child {
   background-color: darkgreen;
 }
-.order form input:last-child {
+.order form input:nth-child(2) {
   background-color: darkred;
 }
 .order form input:hover {
@@ -297,7 +311,7 @@ textarea {
 .order form input:hover:first-child {
   background-color: #38c41b;
 }
-.order form input:hover:last-child {
+.order form input:hover:nth-child(2) {
   background-color: red;
 }
 
