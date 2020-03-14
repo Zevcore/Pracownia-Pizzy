@@ -205,6 +205,26 @@ textarea {
   color: #3d3d3d;
 }
 
+.adminForm {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 1.8rem;
+  margin-top: 50px;
+  width: 400px;
+  margin-left: calc(50% - 200px);
+  display: flex;
+  flex-direction: column;
+}
+.adminForm input {
+  border-bottom: 1px solid black;
+  padding: 20px 0;
+}
+.adminForm input[type=submit] {
+  border: 1px solid black;
+}
+.adminForm input[type=file] {
+  border: none;
+}
+
 .menuConf {
   font-family: "Open-Sans", sans-serif;
   display: flex;
@@ -291,6 +311,9 @@ textarea {
 .order form {
   display: flex;
   justify-content: flex-end;
+}
+.order form input[type=text] {
+  border-bottom: 1px solid black;
 }
 .order form input {
   margin: 5px;
