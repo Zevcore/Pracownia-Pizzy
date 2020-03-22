@@ -28,6 +28,67 @@
     }
 }
 
+.contact {
+    width: 90vw;
+    margin: 50px 5vw;
+    font-family: 'Open-Sans', sans-serif;
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: darkgoldenrod;
+        font-size: 1.5rem;
+        padding: 10px 0;
+    }
+
+    .phone {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .contactForm {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 400px;
+        margin-left: calc(50% - 200px);
+        input {
+            border-bottom: 2px solid #3d3d3d;
+            padding: 10px 0;
+            margin: 10px 0;
+        }
+        textarea {
+            border-bottom: 2px solid #3d3d3d;
+            padding: 10px 0;
+            margin: 10px 0;
+            height: 300px;
+        }
+
+        input[type=submit] {
+            background-color: #3d3d3d;
+            max-width: 100px;
+            font-size: 1.5rem;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 25px;
+            transition: .2s ease all;
+            &:hover {
+                background-color: #303030;
+                color: #f2f2f2;
+                transform: scale(1.1,1.1);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
 main {
     position: relative;
     width: 100%;

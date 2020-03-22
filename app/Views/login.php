@@ -3,7 +3,7 @@
 
     if(isset($_POST['login_submit'])){
         $auth = new AuthController;
-        $auth->tryLogin($_POST['login'], $_POST['password']);
+        $error = $auth->tryLogin($_POST['login'], $_POST['password']);
     }
 
     AuthController::checkLoggedIn();
@@ -20,6 +20,7 @@
         <input type="password" name='password'>
 
         <input type="submit" name='login_submit' value="Zaloguj">
+        <?= isset($error) ? $error : ""; ?>
 
     </form>
 

@@ -13,13 +13,18 @@
     <title>Pracownia Pizzy | Admin Panel</title>
     <link rel="stylesheet" href="<?= Route::homePage(); ?>/styles/pa/main.css"> 
     <script src="https://kit.fontawesome.com/2a39a63a0a.js" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
 </head>
 <body>
 
     <header class="header">
         <ul class='adminMenu'>
             <li><a href="<?= Route::homePage(); ?>">Strona Główna</a></li>
-            <li><a href="<?= Route::homePage(); ?>/admin/dashboard">Zamówienia</a></li>
+            <li><a href="<?= Route::homePage(); ?>/admin/dashboard">Nowe Zamówienia</a></li>
+            <li><a href="<?= Route::homePage(); ?>/admin/orders">Do Przygotowania</a></li>
             <li><a href="<?= Route::homePage(); ?>/admin/menu">Moje Menu</a></li>
             <li><a href="<?= Route::homePage(); ?>/admin/users">Użytkownicy</a></li>
             <li><a href="<?= Route::homePage(); ?>/admin/logout">Wyloguj się</a></li>

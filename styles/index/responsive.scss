@@ -1,4 +1,27 @@
 @media only screen and (max-width: 1000px) {
+    .body {
+        max-width: 100%;
+    }
+    
+    .orderForm {
+        .orderField {
+            flex-direction: column;
+            
+            .goBack {
+                margin-top: 30px;
+                margin-left: calc(50% - 50px);
+            }
+            .orderMenu, .orderCart {
+                width: 90vw;
+                margin: 0 5vw;
+            }
+        }
+        .clientData {
+            width: 90vw;
+            margin: 0 auto;
+        }
+    }
+
     .header {
         max-width: 100%;
         width: 100%;

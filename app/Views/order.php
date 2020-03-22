@@ -5,7 +5,7 @@
         $order->setOrderData($_POST);
     }
 
-    include_once('app/Views/header.php');    
+    include_once('app/Views/header.php');
 ?>
 
     <section class="orderForm">
@@ -20,6 +20,9 @@
             <br>
             <label>Email: </label>
             <input type='text' id='email' placeholder='Email'>
+            <br>
+            <label>Numer telefonu: </label>
+            <input type='number' id='phone' placeholder='Nr. tel.'>
             <br>
             <label>Metoda płatności</label>
             <select id='payment'>
@@ -48,13 +51,14 @@
                     }
                 ?>
             </section>
-
+ 
             <form class="orderCart" method='POST'>
                 <div class='elements'>
                 </div>
 
                 <input type='hidden' name='address'>
                 <input type='hidden' name='email'>
+                <input type='hidden' name='phone'>
                 <input type='hidden' name='payment'>
 
                 <div class="sum">

@@ -11,6 +11,15 @@ $(".continue").click(function(){
         return;
     }
 
+    if(!$("#phone").val()){
+        $(".errorMsg").html("Wpisz numer telefonu.");
+        return;
+    }
+    if($("#phone").val().length != 9){
+        $(".errorMsg").html("Podaj prawidłowy numer telefonu.");
+        return;
+    }
+
     if(!isEmail($("#email").val())){
         $(".errorMsg").html("Podany email nie jest prawidłowy.");
         return;
@@ -23,10 +32,12 @@ $(".continue").click(function(){
 
     var address = $("#adr1").val()+", "+$("#adr2").val()+" "+$("#adr3").val();
     var email = $("#email").val();
+    var phone = $("#phone").val();
     var payment = $("#payment").val();
 
     $("input[name=address]").val(address);
     $("input[name=email]").val(email);
+    $("input[name=phone]").val(phone);
     $("input[name=payment]").val(payment);
 
     $(".clientData").hide();

@@ -8,8 +8,7 @@ class AuthController extends Auth{
         $user = $this->getUser($login);
 
         if(!$user || !password_verify($password, $user['password'])){
-            echo "Błędne dane. Spróbuj ponownie.";
-            return;
+            return "<p style='color: red; font-weight: bold; font-size: 15px; font-family: 'Open-Sans', sans-serif;'>Błędne dane. Spróbuj ponownie.</p>";
         }
 
         $_SESSION['logged_in'] = $user['id'];
@@ -36,5 +35,37 @@ class AuthController extends Auth{
             header("Location: ".Route::homePage());
             die();
         }
+    }
+
+    public function printAllUsers() {
+        return $this->getAllUsers();
+    }
+
+    public function checkUser($login, $password, $name) {
+
+        if(strlen($password) < 8) {
+            echo "Twoje hasło musi mieć co najmniej 8 znaków!";
+            return;
+        }
+        if(strlen($login) < 3) {
+            echo "Twój login musi składać się co najmniej z 3 znaków!";
+            return;
+        }
+
+        $hashedPass = password_hash($password, PASSWORD_DEFAULT);
+
+        if($this->addUser($login, $hashedPass, $name)) {
+            echo "Użytkownik dodany pomyślnie!";
+            return;
+        }
+        else {
+            echo "Coś poszło nie tak!";
+            return;
+        }
+
+    }
+
+    public function deleteExistUser($id) {
+        return $this->deleteUser($id);
     }
 }

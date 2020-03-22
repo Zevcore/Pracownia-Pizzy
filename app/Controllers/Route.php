@@ -3,8 +3,8 @@
 namespace app\Controllers;
 
 class Route{
-    public static $validRoutes = ['login', 'order', 'home', 'admin'];
-    public static $adminValidRoutes = ['dashboard', 'menu', 'users'];
+    public static $validRoutes = ['status', 'login', 'order', 'home', 'admin', 'contact'];
+    public static $adminValidRoutes = ['dashboard', 'menu', 'users', 'orders'];
     public static $url;
     public static $act;
 

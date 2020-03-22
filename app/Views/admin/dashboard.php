@@ -1,37 +1,18 @@
-<secion class="ordersTable">
-    
-    <section class="order">
+<?php
+    use app\Controllers\Route;
+    use app\Controllers\OrderController;
 
-        <ul class="pizza">
-            <li>Pepperoni <span>[2]</span></li>
-            <li>Margherita <span>[2]</span></li>
-        </ul>
+    if(isset($_POST['acceptOrder'])){
+        $order = new OrderController;
+        $order->acceptOrder($_POST['orderId']);
+    }
 
-        <p class="address">Karczew, Rynek Zygmunta Starego 35</p>
+    if(isset($_POST['declineOrder'])){
+        $order = new OrderController;
+        $order->declineOrder($_POST['orderId'], $_POST['reason']);
+    }
+?>
 
-        <div class="payment">Gotówka</div>
+<script src='<?= Route::homePage(); ?>/scripts/check_orders.js'></script>
 
-        <form>
-            <input type="submit" value="Akceptuj">
-            <input type="submit" value="Odrzuć">
-        </form>
-    </section>
-
-    <section class="order">
-
-        <ul class="pizza">
-            <li>Pepperoni <span>[2]</span></li>
-            <li>Margherita <span>[2]</span></li>
-        </ul>
-
-        <p class="address">Karczew, Rynek Zygmunta Starego 35</p>
-
-        <div class="payment">Gotówka</div>
-
-        <form>
-            <input type="submit" value="Akceptuj">
-            <input type="submit" value="Odrzuć">
-        </form>
-    </section>
-
-</section>
+<section class='ordersTable'></section>

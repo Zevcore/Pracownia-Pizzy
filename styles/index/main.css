@@ -271,6 +271,63 @@ html {
   color: #3d3d3d;
 }
 
+.contact {
+  width: 90vw;
+  margin: 50px 5vw;
+  font-family: "Open-Sans", sans-serif;
+}
+.contact h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+.contact a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: darkgoldenrod;
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+.contact .phone {
+  text-align: center;
+  font-size: 1.8rem;
+}
+.contact .contactForm {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  margin-left: calc(50% - 200px);
+}
+.contact .contactForm input {
+  border-bottom: 2px solid #3d3d3d;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+.contact .contactForm textarea {
+  border-bottom: 2px solid #3d3d3d;
+  padding: 10px 0;
+  margin: 10px 0;
+  height: 300px;
+}
+.contact .contactForm input[type=submit] {
+  background-color: #3d3d3d;
+  max-width: 100px;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+  transition: 0.2s ease all;
+}
+.contact .contactForm input[type=submit]:hover {
+  background-color: #303030;
+  color: #f2f2f2;
+  transform: scale(1.1, 1.1);
+  cursor: pointer;
+}
+
 main {
   position: relative;
   width: 100%;
@@ -481,6 +538,43 @@ main .btn:hover {
   font-size: 2rem;
 }
 
+.status {
+  text-align: center;
+  padding: 130px 0;
+  font-family: "Open-Sans", sans-serif;
+}
+.status h1 {
+  color: #3d3d3d;
+  font-size: 5rem;
+  text-transform: uppercase;
+  position: relative;
+  margin: 0 0 50px 0;
+}
+.status h1::before {
+  position: absolute;
+  bottom: -20px;
+  width: 100px;
+  background-color: #3d3d3d;
+  height: 4px;
+  left: calc(50% - 50px);
+  border-radius: 55px;
+  content: "";
+}
+.status p {
+  color: limegreen;
+  font-size: 2rem;
+  padding: 5px 0;
+  font-weight: bold;
+}
+.status a {
+  display: block;
+  padding-top: 50px;
+  color: #3d3d3d;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 .orderForm {
   width: 90vw;
   margin: 50px 5vw;
@@ -504,7 +598,6 @@ main .btn:hover {
 }
 .orderForm .clientData {
   margin-top: 30px;
-  width: 90vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -656,6 +749,26 @@ main .btn:hover {
 }
 
 @media only screen and (max-width: 1000px) {
+  .body {
+    max-width: 100%;
+  }
+
+  .orderForm .orderField {
+    flex-direction: column;
+  }
+  .orderForm .orderField .goBack {
+    margin-top: 30px;
+    margin-left: calc(50% - 50px);
+  }
+  .orderForm .orderField .orderMenu, .orderForm .orderField .orderCart {
+    width: 90vw;
+    margin: 0 5vw;
+  }
+  .orderForm .clientData {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
   .header {
     max-width: 100%;
     width: 100%;
